@@ -77,3 +77,7 @@ ALTER TABLE `event` ADD FOREIGN KEY (`event_id`) REFERENCES `clubEvent` (`event_
 ALTER TABLE `eventUser` ADD FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`);
 
 ALTER TABLE `user` ADD FOREIGN KEY (`user_id`) REFERENCES `eventUser` (`user_id`);
+
+ALTER TABLE `eventTag` ADD FOREIGN KEY (`tag_id`) REFERENCES `tag` (`id`);
+
+ALTER TABLE `eventTag` ADD FOREIGN KEY (`event_id`) REFERENCES `event` (`event_id`);
